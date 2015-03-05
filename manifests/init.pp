@@ -21,7 +21,7 @@ class aem (
   $service_enable          = $aem::params::service_enable,
 ) inherits aem::params {
 
-  validate_array($run_modes, jvm_options)
+  validate_array($run_modes, $jvm_options)
   validate_string($sling_home, $license_customer, $license_key,
     $license_product_version, $license_product_name, $jaas_config
   )
