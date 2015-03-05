@@ -1,7 +1,7 @@
 {
   "name": "pcfens-aem",
   "version": "0.1.0",
-  "author": "Phil Fenstermacher",
+  "author": "pcfens",
   "summary": "Installs, configures, and manages AEM.",
   "license": "Apache Version 2.0",
   "source": "https://github.com/pcfens/puppet-aem",
