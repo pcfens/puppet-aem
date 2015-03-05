@@ -1,0 +1,36 @@
+#!/bin/sh
+#
+# This script is managed by puppet
+#
+### BEGIN INIT INFO
+# Provides: aem
+# Required-Start:
+# Required-Stop:
+# Default-Start: 2 3 4 5
+# Default-Stop: 0 1 6
+# Short-Description: Start, stop aem
+# Description: Start, stop aem
+### END INIT INFO
+
+AEM_USER=<%= @user %>
+
+########
+SERVER=<%= @sling_home %>
+START=${SERVER}/bin/start
+STOP=${SERVER}/bin/stop
+STATUS="${SERVER}/bin/status"
+
+case "$1" in
+start)
+su - ${AEM_USER} ${START}
+;;
+stop)
+su - ${AEM_USER} ${STOP}
+;;
+status)
+su - ${AEM_USER} ${STATUS}
+;;
+*)
+echo "Unknown argument $1"
+;;
+esac
